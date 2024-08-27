@@ -1,0 +1,160 @@
+:root {
+  --dark-blue: #1a395f;
+  --main-color: #a5b3e6;
+  --light-blue: #396195;
+  
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--main-color);
+ 
+}
+header {
+  margin-bottom: 5rem;
+  width: 60%;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+header img {
+  width: 250px;
+  height: 120px;
+}
+.alert__msj {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.form__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70dvh;
+}
+
+.submit__container {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.form__input {
+
+  font-size: 3.2rem;
+  color: var(--dark-blue);
+  margin-bottom: 3rem;
+  overflow: auto;
+  width: 100%;
+  max-width: 577px;
+  border-color: transparent;
+  height: 40dvh;
+  outline: none;
+  background: transparent;
+}
+
+.form__btn--secondary {
+  background: transparent;
+  color: var(--dark-blue);
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: 335px;
+  height: 70px;
+ 
+}
+
+
+.form__btn {
+  background: var(--dark-blue);
+  color: rgb(223, 232, 239);
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: 330px;
+  height: 70px;
+  
+  border: 1px solid var(--dark-blue);
+}
+
+.result {
+  background-color: rgb(223, 76, 76);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  height: 72dvh;
+  border-radius: 32px;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.result__img {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .submit__container {
+    justify-content: center;
+  }
+  .result {
+    height: auto;
+    margin-top: 2rem;
+    min-height: 186px;
+    max-width: 624px;
+    
+  }
+  .result__img {
+    display: none;
+  }
+  header img {
+    width: 73px;
+  }
+}
+
+.loader {
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #bb1616;
+  box-shadow: 0 0 0 50px;
+  clip-path: polygon(
+    -50px -20px,
+    10% -12px,
+    20% 0,
+    calc(50% - 15px) 0,
+    calc(50% - 10px) -20px,
+    calc(50% - 8px) -15px,
+    calc(50% + 8px) -15px,
+    calc(50% + 10px) -20px,
+    calc(50% + 15px) 0,
+    80% 0,
+    90% -12px,
+    calc(100% + 50px) -20px,
+    100% 80%,
+    calc(100% + 10px) calc(100% + 10px),
+    60% 100%,
+    50% calc(100% + 15px),
+    40% 100%,
+    -10px calc(100% + 10px),
+    0 80%
+  );
+}
